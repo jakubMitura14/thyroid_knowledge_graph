@@ -1,7 +1,9 @@
 # FROM nvidia/cuda:11.3.1-cudnn8-devel-ubuntu20.04
 # FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
 
-FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
+# FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
+FROM ubuntu:jammy-20240405
+
 
 ################################################################################
 # Prevent apt-get from prompting for keyboard choice
@@ -146,12 +148,14 @@ RUN curl -fSsL -O https://bootstrap.pypa.io/get-pip.py && \
     rm get-pip.py
 
 
-
-RUN python3 -m pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118 
+RUN python3 -m pip install torch==2.0.1 torchvision==0.15.2+cu118 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118 
 # RUN python3 -m pip install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2--index-url https://download.pytorch.org/whl/cu121
 
 
 RUN python3 -m pip  --no-cache-dir install install --no-cache-dir \
+    torch \
+    torchvision \
+    torchaudio \
     # torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118 \
     pandas \
     grpcio \
@@ -213,7 +217,7 @@ RUN python3 -m pip  --no-cache-dir install install --no-cache-dir \
     langchain langchain-community langchain-openai langchain-experimental neo4j tiktoken \
     evaluate seqeval graphdatascience dill gensim ipymarkup more_itertools peft sentence_transformers tqdm transformers \
     habanero doi2pdf paperscraper \
-    spacy[cuda118] \
+    spacy \
     scispacy \
     PyPDF2 \
     semantic-text-splitter \
@@ -222,35 +226,33 @@ RUN python3 -m pip  --no-cache-dir install install --no-cache-dir \
     git+https://github.com/networkx/networkx.git \
     networkx \
     sentencepiece \
-    click==8.0.4 \
-    loguru==0.7.2 \
-    numpy==1.24.3 \
-    pandas==2.0.3 \
-    python-dateutil==2.8.2 \
-    pytz==2023.3.post1 \
-    scipy==1.11.1 \
-    tqdm==4.65.0 \
-    typer==0.9.0 \
-    typing-extensions==4.7.1 \
-    tzdata==2023.3 \
+    click \
+    loguru \
+    python-dateutil \
+    pytz\
+    scipy \
+    tqdm \
+    typer \
+    typing-extensions \
+    tzdata \
     git+https://github.com/HTian1997/getarticle.git \
     langchain-anthropic \
-    https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_sm-0.5.4.tar.gz \
-    https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_scibert-0.5.4.tar.gz \
+    # https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_sm-0.5.4.tar.gz \
+    # https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_scibert-0.5.4.tar.gz \
     faiss-cpu \
     python-liquid \
     pyserini \
     datasets \
-    neo4j-driver graphistry[all] protobuf
+    neo4j-driver graphistry[all] protobuf \
+    huggingface_hub instructor
 
 
-
-RUN python3 -m pip  --no-cache-dir install install --no-cache-dir huggingface_hub
+    # python3 -m pip  --no-cache-dir install install --no-cache-dir  git+https://github.com/NLPatVCU/PaperScraper.git
 
 
 # spacy \
 
-
+# python3 -m pip install selenium
 
 # RUN python3 -m pip install -U spacy[cuda118] \
 #     scispacy \

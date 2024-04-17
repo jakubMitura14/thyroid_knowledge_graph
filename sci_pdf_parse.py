@@ -48,3 +48,5 @@ print(pdf_files)
 
 list(map(save_preprocessed, pdf_files))
 # full_paths = [os.path.abspath(file) for file in pdf_files]
+
+# !!!!!!!!!1 good alternative here https://github.com/inukshuk/anystyle

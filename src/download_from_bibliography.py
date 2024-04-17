@@ -11,6 +11,7 @@ from subprocess import Popen
 from paperscraper.pdf import save_pdf
 
 cr = Crossref()
+from habanero import Crossref
 # ga = GetArticle()
 
 path_old="/workspaces/thyroid_knowledge_graph/preprocessed/old_guidelines.json"
