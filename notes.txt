@@ -1,0 +1,65 @@
+https://pypi.org/project/semantic-text-splitter/
+
+scipdf parser
+https://github.com/titipata/scipdf_parser
+
+
+bot to auto download papers
+https://github.com/ferru97/PyPaperBot
+
+
+
+https://github.com/allenai/scispacy
+
+
+Entity linking and far more in awesome list
+https://github.com/lujiaying/Awesome-HealthCare-KnowledgeBase
+
+
+
+https://github.com/WooheonHong/BERD
+
+
+Important !!!
+https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub-support/tree/main/kg-hub-tutorials
+
+seems promising 
+https://arxiv.org/ftp/arxiv/papers/2403/2403.00953.pdf
+
+
+
+
+old but biomedical articles so intresting 
+https://github.com/tasosnent/Biomedical-Knowledge-Integration
+
+
+Knowledge Graph Construction
+https://github.com/zjunlp/DeepKE
+
+new notes langchain
+https://blog.langchain.dev/constructing-knowledge-graphs-from-text-using-openai-functions/
+
+https://medium.com/@dhirendrachoudhary_96193/building-an-intelligent-medical-bot-a-comprehensive-guide-to-langchain-chromadb-and-q-a-systems-978befb4c235
+https://medium.com/@mehdi.iraqui/medical-rag-system-using-langchain-and-mistral-7b-31c3982b0b52
+https://medium.com/@john.newberry27/populating-a-snomed-ct-property-graph-with-synthetic-patient-data-a43a3a044649
+
+well explained
+https://youtu.be/BKH7tZrhat0?si=lEDeb6DMkXWcHPZ6
+https://www.youtube.com/watch?si=lfGSuNpkpIUD5eZ_&v=ftlZ0oeXYRE&feature=youtu.be
+
+most Important!!
+snomed entity linking contest 
+https://drivendata.co/blog/snomed-ct-entity-linking-benchmark
+https://github.com/drivendataorg/snomed-ct-entity-linking
+
+alternative 
+https://github.com/CogStack/MedCAT/tree/master
+
+Snomed can be downloaded from https://github.com/b2ihealthcare/rf2-d2
+
+
+
+
+good snomed explained 
+
+https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=properties

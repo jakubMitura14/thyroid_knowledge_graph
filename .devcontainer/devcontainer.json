@@ -1,0 +1,44 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.241.1/containers/python-3
+{
+    "name": "Python 3",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "overrideCommand": false,
+    "settings": {
+
+    },
+    "runArgs": [
+        "--init",
+        "--gpus",
+        "all",
+        "--ipc",
+        "host",
+        "--net",
+        "host",
+        "--privileged",
+        "-i",
+        "-e",
+        "DISPLAY=${env:DISPLAY}",
+        "-v",
+        "/tmp/.X11-unix:/tmp/.X11-unix"
+    ],
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-azuretools.vscode-docker"
+        // "ms-python.vscode-pylance"
+    ],
+    "mounts": [
+         "source=/media/jm/hddData/datasets/snomed,target=/data,type=bind,consistency=cached"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        // "ghcr.io/devcontainers/features/python:1": {},
+        // "ghcr.io/msclock/features/gitlab-ci-local:0": {}
+    }
+    // "postStartCommand": "/docker-entrypoint.sh"
+}
