@@ -63,3 +63,13 @@ Snomed can be downloaded from https://github.com/b2ihealthcare/rf2-d2
 good snomed explained 
 
 https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=properties
+
+
+structured text from any llm
+
+https://www.marktechpost.com/2024/04/09/meet-instructor-a-python-library-that-makes-it-easy-to-reliably-get-structured-data-like-json-from-large-language-models-llms-like-gpt-3-5-gpt-4-gpt-4-vision/
+
+
+
+GUI 
+https://medium.com/@harishahamed26/medgpt-bot-based-on-large-language-models-using-langchain-streamlit-702cb135ea8d

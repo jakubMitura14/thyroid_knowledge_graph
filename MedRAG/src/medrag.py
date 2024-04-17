@@ -15,12 +15,6 @@ sys.path.append("src")
 from utils import RetrievalSystem
 from template import *
 
-if openai.api_key is None:
-    from config import config
-    openai.api_type = config["api_type"]
-    openai.api_base = config["api_base"] 
-    openai.api_version = config["api_version"]
-    openai.api_key = config["api_key"]
 
 
 class MedRAG:

@@ -245,7 +245,7 @@ RUN python3 -m pip  --no-cache-dir install install --no-cache-dir \
 
 
 
-
+RUN python3 -m pip  --no-cache-dir install install --no-cache-dir huggingface_hub
 
 
 # spacy \
