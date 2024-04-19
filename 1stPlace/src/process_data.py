@@ -126,12 +126,35 @@ def make_clean_annotations():
     annotations = pd.read_csv(raw_directory / "train_annotations.csv")
     logger.info(f"""Loaded {len(annotations):,} from {raw_directory / "train_annotations.csv"}""")
     logger.info(f"""annotations columns {annotations.columns}  index {annotations.index}""")
-    logger.info(f"""aaaaa snomed {snomed}""")
-    logger.info(f"""aaaaa annotations.loc[i, concept_id] {annotations['concept_id']}""")
-    for i in annotations.index:
-        logger.info(f"""tttt  {annotations.index[i]}""")
-        logger.info(f"""bbbbb  {annotations.loc[annotations.index[i], 'concept_id']}""")
-        # logger.info(f"""bbbbb  {snomed[int(annotations.loc[annotations.index[i]]), 'concept_id']}""")
+    # logger.info(f"""aaaaa snomed {snomed}""")
+    # logger.info(f"""aaaaa annotations.loc[i, concept_id] {annotations['concept_id']}""")
+    # for i in annotations.index:
+    #     logger.info(f"""tttt  {annotations.index[i]}""")
+    #     logger.info(f"""bbbbb  {snomed.iloc[lambda x : x.concept_id==int(annotations.loc[annotations.index[i], 'concept_id']) ]  }""")
+    #     # logger.info(f"""bbbbb  {snomed[int(annotations.loc[annotations.index[i]]), 'concept_id']}""")
+    # annotations = annotations[annotations["concept_id"] != 51316009]
+    # annotations = annotations[annotations["concept_id"] != 42869005]
+
+    logger.info(f"""ssss    {snomed.index}""")
+
+    annot_keys=annotations["concept_id"].to_numpy()
+    snomed_keys=snomed.index.to_numpy()
+
+    missing_elements = set(annot_keys) - set(snomed_keys)
+    logger.info(f"""aaaaa missing_elements {len(missing_elements)}    {missing_elements}""")
+
+
+    logger.info(f"""uuuu missing_elements {len(annotations)}""")
+
+    for i in missing_elements:
+        annotations = annotations[annotations["concept_id"] != i]
+
+    logger.info(f"""uuuu2222 missing_elements {len(annotations)}""")
+
+
+    # missing_elements
+
+    annotations["concept_id"] = annotations["concept_id"].astype(int)
 
     annotations["source"] = [
         texts[annotations.loc[i, "note_id"]][
