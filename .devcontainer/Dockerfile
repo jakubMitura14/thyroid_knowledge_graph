@@ -237,15 +237,14 @@ RUN python3 -m pip  --no-cache-dir install install --no-cache-dir \
     langchain-anthropic \
     https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_sm-0.5.4.tar.gz \
     https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_scibert-0.5.4.tar.gz \
-    faiss-cpu \
     python-liquid \
     pyserini \
     datasets \
-    neo4j-driver graphistry[all] protobuf
+    neo4j-driver graphistry[all] protobuf huggingface_hub chromadb faiss-cpu
 
 
 
-RUN python3 -m pip  --no-cache-dir install install --no-cache-dir huggingface_hub
+# RUN python3 -m pip  --no-cache-dir install install --no-cache-dir huggingface_hub chromadb faiss-gpu
 
 
 # spacy \

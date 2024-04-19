@@ -33,7 +33,7 @@
         // "ms-python.vscode-pylance"
     ],
     "mounts": [
-         "source=/media/jm/hddData/datasets/snomed,target=/data,type=bind,consistency=cached"
+         "source=/media/uzytkownik/hddData/datasets/snomed,target=/data,type=bind,consistency=cached"
     ],
     "features": {
         "ghcr.io/devcontainers/features/git:1": {},

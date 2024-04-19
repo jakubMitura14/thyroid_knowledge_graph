@@ -125,6 +125,13 @@ def make_clean_annotations():
 
     annotations = pd.read_csv(raw_directory / "train_annotations.csv")
     logger.info(f"""Loaded {len(annotations):,} from {raw_directory / "train_annotations.csv"}""")
+    logger.info(f"""annotations columns {annotations.columns}  index {annotations.index}""")
+    logger.info(f"""aaaaa snomed {snomed}""")
+    logger.info(f"""aaaaa annotations.loc[i, concept_id] {annotations['concept_id']}""")
+    for i in annotations.index:
+        logger.info(f"""tttt  {annotations.index[i]}""")
+        logger.info(f"""bbbbb  {annotations.loc[annotations.index[i], 'concept_id']}""")
+        # logger.info(f"""bbbbb  {snomed[int(annotations.loc[annotations.index[i]]), 'concept_id']}""")
 
     annotations["source"] = [
         texts[annotations.loc[i, "note_id"]][
