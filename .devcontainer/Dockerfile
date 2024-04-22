@@ -244,7 +244,41 @@ RUN python3 -m pip  --no-cache-dir install install --no-cache-dir \
     pyserini \
     datasets \
     neo4j-driver graphistry[all] protobuf \
-    huggingface_hub instructor
+    huggingface_hub instructor sentencepiece \
+    click \
+    loguru \
+    numpy \
+    pandas \
+    python-dateutil \
+    pytz \
+    scipy \
+    tqdm \
+    typer \
+    typing-extensions \
+    tzdata \
+    # git+https://github.com/HTian1997/getarticle.git \
+    langchain-anthropic \
+    # https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_sm-0.5.4.tar.gz \
+    # https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_scibert-0.5.4.tar.gz \
+    python-liquid \
+    pyserini \
+    datasets \
+    neo4j-driver graphistry[all] protobuf huggingface_hub chromadb 
+
+
+
+
+
+RUN python3 -m pip  --no-cache-dir install faiss-cpu \
+beautifulsoup4 \
+# psycopg2 \
+pyodbc \
+pymssql \
+medcat \
+plotly \
+llama_index
+
+RUN python3 -m pip  --no-cache-dir install  ollama yachalk gspread
 
 
     # python3 -m pip  --no-cache-dir install install --no-cache-dir  git+https://github.com/NLPatVCU/PaperScraper.git
